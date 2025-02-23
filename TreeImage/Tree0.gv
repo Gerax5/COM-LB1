@@ -1,33 +1,25 @@
 digraph "TreeImage/Tree0" {
 	A0 [label="."]
 	A1 [label="."]
-	A2 [label="."]
-	A3 [label="."]
-	A4 [label="|"]
-	A5 [label=a]
-	A6 [label=b]
-	A7 [label="*"]
-	A8 [label="|"]
-	A9 [label=a]
-	A10 [label=b]
-	A11 [label=a]
-	A12 [label=b]
-	A13 [label="|"]
-	A14 [label=c]
-	A15 [label="ε"]
-	A4 -> A5
-	A4 -> A6
-	A3 -> A4
-	A8 -> A9
-	A8 -> A10
-	A7 -> A8
-	A3 -> A7
+	A2 [label="|"]
+	A3 [label=0]
+	A4 [label="ε"]
+	A5 [label="|"]
+	A6 [label="|"]
+	A7 [label=1]
+	A8 [label="ε"]
+	A9 [label="ε"]
+	A10 [label="*"]
+	A11 [label=0]
 	A2 -> A3
-	A2 -> A11
+	A2 -> A4
 	A1 -> A2
-	A1 -> A12
+	A6 -> A7
+	A6 -> A8
+	A5 -> A6
+	A5 -> A9
+	A1 -> A5
 	A0 -> A1
-	A13 -> A14
-	A13 -> A15
-	A0 -> A13
+	A10 -> A11
+	A0 -> A10
 }

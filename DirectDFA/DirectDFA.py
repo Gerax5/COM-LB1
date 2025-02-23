@@ -173,7 +173,7 @@ class DirectDFA:
                     stack.append(nextState)
                 transitions[letter] = self.transitions[nextState]["state"]
 
-        print(self.transitions)
+        # print(self.transitions)
 
     def setAcceptStates(self):
         for i in self.transitions:
@@ -211,9 +211,12 @@ class DirectDFA:
         self.diagram.render(f'AutomataDirectDFA/DirectDFA{self.fileNumber}', format='png', cleanup=False)
 
     def recognize(self, string: str):
+        print(f"\033[32mExpresion a evaluar en DFA con construccion directa : {string}\033[0m")
         currentState = self.getInitialState()
+        print(f"\033[32mEstado inicial: {self.transitions[currentState]['name']}\033[0m")
         for letter in string:
             currentState = self.transitions[currentState]["transitions"][letter]
+            print(f"\033[32mEstado actual: {self.transitions[currentState]['name']}\033[0m")
         return self.transitions[currentState]["accept"]
             
     
