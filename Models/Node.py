@@ -1,5 +1,5 @@
 class Node():
-    def __init__(self, object: list, isOperator: bool, childs: list | None):
+    def __init__(self, object: list, isOperator: bool, childs: list["Node"] | None):
         self.object = object
         self.isOpeator = isOperator
         self.childs = childs
@@ -7,8 +7,8 @@ class Node():
 
         #Direct DFA
         self.leafNumber: None | int = None
-        self.firstPositon: list = []
-        self.lastPosition: list = []
+        self.firstPosition: set = {}
+        self.lastPosition: set = {}
         self.nullable: bool = False 
 
 

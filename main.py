@@ -26,10 +26,11 @@ for i in range(len(newLines)):
     line = newLines[i]
     tree = Tree(line[0], i)
     stack = tree.getStack()
+    alphabet = tree.getAlphabet()
 
     nfa = NFAD(stack, i)
 
-    dfa = DFA(nfa.getStates(), tree.getAlphabet(), i)
+    dfa = DFA(nfa.getStates(), alphabet, i)
 
     response = dfa.validateNFARegularExpression(line[1])
     print("\033[35mSe termino de validar la expression en AFN\033[0m")
@@ -57,7 +58,16 @@ for i in range(len(newLines)):
     tree = Tree(line[0], i+10, True)
     stack = tree.getStack()
 
-    dfa = DirectDFA(stack)
+    alphabet = set(alphabet)
+    alphabet = list(alphabet)
+
+    dfa = DirectDFA(stack, alphabet)
+    response = dfa.recognize(line[1])
+    print("\033[35mSe termino de validar la expression en el DFA con el metodo directo\033[0m")
+    if(response):
+        print("\033[32mSi\033[0m")
+    else:
+        print("\033[31mNo\033[0m")
 
 
 
