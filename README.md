@@ -1,4 +1,6 @@
-# 📌 Laboratorio - Construcción Directa de AFD y ecosistema de reconocimiento de expresiones regulares
+# 🚀 Laboratorio - Construcción Directa de AFD y ecosistema de reconocimiento de expresiones regulares
+---
+## [📌 Link al video](https://youtu.be/_a_Uvlk9lvA)
 ---
 ## 🎯 Objetivos
 
