@@ -1,0 +1,10 @@
+digraph {
+	start [label=inicio shape=point width=0]
+	o5o6V1F7V4V3 [label=s0 shape=doublecircle]
+	o6F7V2 [label=s1 shape=doublecircle]
+	"" [label=s2 shape=circle]
+	o5o6V1F7V4V3 -> o6F7V2 [label=a]
+	o6F7V2 -> "" [label=a]
+	"" -> "" [label=a]
+	start -> o5o6V1F7V4V3
+}

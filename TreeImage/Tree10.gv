@@ -1,0 +1,11 @@
+digraph "TreeImage/Tree10" {
+	A0 [label="."]
+	A1 [label="|"]
+	A2 [label=a]
+	A3 [label="ε"]
+	A4 [label="#"]
+	A1 -> A2
+	A1 -> A3
+	A0 -> A1
+	A0 -> A4
+}
