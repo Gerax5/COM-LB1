@@ -208,7 +208,7 @@ class DirectDFA:
 
         self.diagram.edge("start",self.transitions[self.getInitialState()]["name"])
 
-        self.diagram.render(f'AutomataDirectDFA/DirectDFA{self.fileNumber}', format='png', cleanup=False)
+        self.diagram.render(f'AAImageAutomataDirectDFA/DirectDFA{self.fileNumber}', format='png', cleanup=False)
 
     def recognize(self, string: str):
         print(f"\033[32mExpresion a evaluar en DFA con construccion directa : {string}\033[0m")

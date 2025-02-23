@@ -1,0 +1,19 @@
+digraph {
+	start [label=inicio shape=point width=0]
+	o15V9k19V10F21V14o5V7V3V17V13o16V4k20o6o11V1o12 [label=s0 shape=doublecircle]
+	F21k20V18V17o15V9k19V14V7V2V13o16o6o11V10o12 [label=s1 shape=doublecircle]
+	k19V8F21V17o16k20o12 [label=s2 shape=doublecircle]
+	F21k20V18V17 [label=s3 shape=doublecircle]
+	"" [label=s4 shape=circle]
+	o15V9k19V10F21V14o5V7V3V17V13o16V4k20o6o11V1o12 -> F21k20V18V17o15V9k19V14V7V2V13o16o6o11V10o12 [label=0]
+	o15V9k19V10F21V14o5V7V3V17V13o16V4k20o6o11V1o12 -> k19V8F21V17o16k20o12 [label=1]
+	F21k20V18V17o15V9k19V14V7V2V13o16o6o11V10o12 -> F21k20V18V17 [label=0]
+	F21k20V18V17o15V9k19V14V7V2V13o16o6o11V10o12 -> k19V8F21V17o16k20o12 [label=1]
+	k19V8F21V17o16k20o12 -> F21k20V18V17 [label=0]
+	k19V8F21V17o16k20o12 -> "" [label=1]
+	F21k20V18V17 -> F21k20V18V17 [label=0]
+	F21k20V18V17 -> "" [label=1]
+	"" -> "" [label=0]
+	"" -> "" [label=1]
+	start -> o15V9k19V10F21V14o5V7V3V17V13o16V4k20o6o11V1o12
+}

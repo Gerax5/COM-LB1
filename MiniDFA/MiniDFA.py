@@ -74,7 +74,7 @@ class MiniDFA():
 
         self.diagram.edge("start",self.initialState())
 
-        self.diagram.render(f'AutomataMini/MinDFA{self.fileNumber}', format='png', cleanup=False)
+        self.diagram.render(f'AAImageAutomataMini/MinDFA{self.fileNumber}', format='png', cleanup=False)
 
     def minimization(self):
         initalPartition = [self.noAcceptStates, self.acceptStates]

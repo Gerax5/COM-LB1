@@ -50,7 +50,7 @@ class NFAD():
         state2.conectState("ε",fstate.nodeNumber)
         self.states.append(fstate)
 
-        self.diagram.render(f'AutomataNFA/NFA{self.fileNumber}', format='png', cleanup=False)
+        self.diagram.render(f'AAImageAutomataNFA/NFA{self.fileNumber}', format='png', cleanup=False)
 
     def getNodeCount(self):
         toReturn = self.nodeCount

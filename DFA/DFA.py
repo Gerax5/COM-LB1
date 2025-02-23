@@ -249,4 +249,4 @@ class DFA():
 
         self.diagram.edge("start",self.initialStateDFA())
 
-        self.diagram.render(f'AutomataDFA/DFA{self.fileNumber}', format='png', cleanup=False)
+        self.diagram.render(f'AAImageAutomataDFA/DFA{self.fileNumber}', format='png', cleanup=False)

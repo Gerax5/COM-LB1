@@ -25,7 +25,7 @@ class Tree():
 
 
     def createTree(self):
-        self.d = graphviz.Digraph(f'TreeImage/Tree{self.fileNumber}')
+        self.d = graphviz.Digraph(f'AAImageTree/Tree{self.fileNumber}')
         cont = 0
         self.createTreeNodes(self.stack, cont)
         self.conectTreeNodes(self.stack, 0)
