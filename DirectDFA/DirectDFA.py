@@ -6,9 +6,12 @@ class DirectDFA:
     BINARY_OPERATORS = ["^", "|", "."]
 
     def __init__(self, stack: list[Node], alphabet: list[str], fileNumber = 0):
+        # Initialize the variables
         self.fileNumber = fileNumber
         self.alphabet = alphabet
         self.currentLeafNumber = 0
+
+        # Initialize the tree
         self.leaves = {}
         seed = stack[0]
         self.enumerateLeaves(seed)
@@ -17,13 +20,14 @@ class DirectDFA:
         self.setLastPosition(seed)
         self.setFollowPosition(seed)
 
+        # make the transition table
         self.transitions = {}
         self.stateNumber = 0
         self.generateTransitionTable(seed)
         self.setAcceptStates()
-        self.createGraph()
 
-        print(self.transitions)
+        # Create the graph
+        self.createGraph()
 
     def enumerateLeaves(self, node: Node):
         if node.getIsOperator():
