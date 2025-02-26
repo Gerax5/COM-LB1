@@ -1,0 +1,7 @@
+digraph "AAImageTree/Tree1" {
+	A0 [label="."]
+	A1 [label=a]
+	A2 [label="#"]
+	A0 -> A1
+	A0 -> A2
+}

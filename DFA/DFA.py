@@ -70,7 +70,7 @@ class DFA():
             #print(st.transitions)
             for i in range(len(st.transitions)):
                 if letter in st.transitions[i]:
-                    print(f"\033[32mCon la letra se movio a: {st.states[i]}\033[0m")
+                    # print(f"\033[32mCon la letra se movio a: {st.states[i]}\033[0m")
                     newState.append(st.states[i])
 
         stateName = "".join(state)

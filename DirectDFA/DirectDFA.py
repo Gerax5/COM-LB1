@@ -215,6 +215,9 @@ class DirectDFA:
         currentState = self.getInitialState()
         print(f"\033[32mEstado inicial: {self.transitions[currentState]['name']}\033[0m")
         for letter in string:
+            if letter not in self.alphabet:
+                print(f"\033[31mLa letra {letter} no esta en el alfabeto\033[0m")
+                return False
             currentState = self.transitions[currentState]["transitions"][letter]
             print(f"\033[32mEstado actual: {self.transitions[currentState]['name']}\033[0m")
         return self.transitions[currentState]["accept"]
