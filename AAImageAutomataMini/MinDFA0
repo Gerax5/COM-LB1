@@ -1,10 +1,16 @@
 digraph {
 	start [label=inicio shape=point width=0]
-	V1 [label=s0 shape=circle]
-	"" [label=s1 shape=circle]
-	V2F3 [label=s2 shape=doublecircle]
-	V1 -> V2F3 [label=a]
-	"" -> "" [label=a]
-	V2F3 -> "" [label=a]
-	start -> V1
+	"" [label=s0 shape=circle]
+	V14V4V10o5o11V3o15V7o12o16k19V17k20V1V13V9o6F21 [label=s1 shape=doublecircle]
+	V17V18F21k20V14V10o16k19o11o15V7o12V13V9V2o6 [label=s2 shape=doublecircle]
+	o16k19o12V8V17k20F21V17V18F21k20 [label=s3 shape=doublecircle]
+	"" -> "" [label=0]
+	"" -> "" [label=1]
+	V14V4V10o5o11V3o15V7o12o16k19V17k20V1V13V9o6F21 -> V17V18F21k20V14V10o16k19o11o15V7o12V13V9V2o6 [label=0]
+	V14V4V10o5o11V3o15V7o12o16k19V17k20V1V13V9o6F21 -> o16k19o12V8V17k20F21V17V18F21k20 [label=1]
+	V17V18F21k20V14V10o16k19o11o15V7o12V13V9V2o6 -> o16k19o12V8V17k20F21V17V18F21k20 [label=0]
+	V17V18F21k20V14V10o16k19o11o15V7o12V13V9V2o6 -> o16k19o12V8V17k20F21V17V18F21k20 [label=1]
+	o16k19o12V8V17k20F21V17V18F21k20 -> o16k19o12V8V17k20F21V17V18F21k20 [label=0]
+	o16k19o12V8V17k20F21V17V18F21k20 -> "" [label=1]
+	start -> V14V4V10o5o11V3o15V7o12o16k19V17k20V1V13V9o6F21
 }
