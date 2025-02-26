@@ -41,14 +41,6 @@ v = input("Quiere minimizar el DFA Directo? (y/n): ")
 if v == "y":
     print("Minimizando DFA Directo")
     ddfa = GenericMiniDFA(ddfa.transitions, ddfa.acceptStates, ddfa.noAcceptStates, alphabet, 0)
-# print(ddfa.noAcceptStates)
-# print(ddfa.acceptStates)
-# print(ddfa.transitions)
-
-# print(alphabet)
-# mind = GenericMiniDFA(ddfa.transitions, ddfa.acceptStates, ddfa.noAcceptStates, alphabet, 0)
-
-# print(ddfa.states)
 
 
 flag = True
