@@ -11,6 +11,9 @@ class DirectDFA:
         self.alphabet = alphabet
         self.currentLeafNumber = 0
 
+        self.acceptStates = []
+        self.noAcceptStates = []
+
         # Initialize the tree
         self.leaves = {}
         seed = stack[0]
@@ -195,8 +198,10 @@ class DirectDFA:
         for state in self.transitions:
             if state != ():
                 if self.transitions[state]["accept"]:
+                    self.acceptStates.append(state)
                     self.diagram.node(self.transitions[state]["name"], self.transitions[state]["name"], shape='doublecircle')
                 else:
+                    self.noAcceptStates.append(state)
                     self.diagram.node(self.transitions[state]["name"], self.transitions[state]["name"], shape='circle')
 
         for state in self.transitions:

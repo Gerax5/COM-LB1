@@ -1,10 +1,10 @@
-
 from NFA.NFA import NFAD
 from DFA.DFA import DFA
 from MiniDFA.MiniDFA import MiniDFA
 from SintacticTree.Tree import Tree
 from DirectDFA.DirectDFA import DirectDFA
 from Models.Node import Node
+from GenericMiniDFA.MiniDFA import GenericMiniDFA
 
 
 flag = True
@@ -35,6 +35,21 @@ stack = tree.getStack()
 alphabet = set(alphabet)
 alphabet = list(alphabet)
 ddfa = DirectDFA(stack, alphabet)
+
+
+v = input("Quiere minimizar el DFA Directo? (y/n): ")
+if v == "y":
+    print("Minimizando DFA Directo")
+    ddfa = GenericMiniDFA(ddfa.transitions, ddfa.acceptStates, ddfa.noAcceptStates, alphabet, 0)
+# print(ddfa.noAcceptStates)
+# print(ddfa.acceptStates)
+# print(ddfa.transitions)
+
+# print(alphabet)
+# mind = GenericMiniDFA(ddfa.transitions, ddfa.acceptStates, ddfa.noAcceptStates, alphabet, 0)
+
+# print(ddfa.states)
+
 
 flag = True
 while flag:
